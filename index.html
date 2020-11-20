@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моя самая лучшая страница - Влад</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #414a4c;
+        }
+        .loader {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 4px solid #414a4c;
+            overflow: hidden;
+            box-shadow: -10px -10px 15px rgb(59, 59, 59),
+            10px 10px 10px rgba(0, 0, 0),
+            inset -10px -10px 15px rgba(51, 49, 49, 0.5),
+            inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+        .loader span {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient( red, yellow, blue);
+            z-index: -1;
+            animation: loader 0.5s linear infinite;
+            }
+            @keyframes loader {
+                0% {
+                    transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+         }
+         .loader::before {
+             content: '';
+             position: absolute;
+             top: 25px;
+             left: 25px;
+             right: 25px;
+             bottom: 25px;
+             background-color: black;
+             border-radius: 50%;
+             border: 4px solid greenyellow;
+             box-shadow:  inset -10px -10px 15px rgba(51, 49, 49, 0.5),
+                           inset 10px 10px 10px rgba(0, 0, 0, 0.1),
+         }
+         h5:hover {
+            font-size: 3em;
+         }
+    </style>
 </head>
 <body>
+
     <h1>Здравствуйте</h1>
     <h5>
         <a href="lesson_2.html">Задание урок 2 - 1</a>
@@ -13,5 +70,28 @@
     <h5>
         <a href="my_webpage.html">Моя веб-страница</a>
     </h5>
+    <h5>
+        <a href="leson_10.html">10</a>
+    </h5>
+    <h5>
+        <a href="leson_10_2.html">10</a>
+    </h5>
+    <h5>
+        <a href="leson_10_3.html">10</a>
+    </h5>
+    <h5>
+        <a href="leson11.html">11</a>
+    </h5>
+    <h5>
+        <a href="leson_11_2.html">11</a>
+    </h5>
+    <h5>
+        <a href="leson_11_3.html">11</a>
+    </h5>
+</tr>
+</table>
+    <div class="loader">
+        <span></span>
+    </div>
 </body>
 </html>
